@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 OpenBrowser
+    Create Webdriver    Chrome    executable_path=C:\\npm\\prefix\\node_modules\\chromedriver\\lib\\chromedriver\\chromedriver.exe
     Open Browser    https://www.comap-control.com/    chrome
     Wait Until Element Is Visible    name=p$lt$ctl05$wCLATC$btnAllowAll    
     Click Button    name=p$lt$ctl05$wCLATC$btnAllowAll
