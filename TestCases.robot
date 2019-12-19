@@ -1,14 +1,13 @@
 *** Settings ***
 Library    SeleniumLibrary
 
-
 *** Test Cases ***
 OpenBrowser
-    Create Webdriver    Chrome    executable_path=C:\\npm\\prefix\\node_modules\\chromedriver\\lib\\chromedriver\\chromedriver.exe
     Open Browser    https://www.comap-control.com/    chrome
     Wait Until Element Is Visible    name=p$lt$ctl05$wCLATC$btnAllowAll    
     Click Button    name=p$lt$ctl05$wCLATC$btnAllowAll
 Login
+    Wait Until Element Is Visible    xpath: //*[contains(text(), "Log")]
     Click Element    xpath: //*[contains(text(), "Log")]  
     Wait Until Element Is Visible    name=p$lt$ctl03$pageplaceholder$p$lt$ctl00$ComApLogonForm$Login1$UserName    
     Input Text    name=p$lt$ctl03$pageplaceholder$p$lt$ctl00$ComApLogonForm$Login1$UserName    comapkenticotest@gmail.com   
